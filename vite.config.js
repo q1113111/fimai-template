@@ -36,5 +36,5 @@ export default defineConfig({
       }
     }
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/fimai-template/' : '/'
+  base: process.env.NODE_ENV === 'production' ? '/fimai-template/' : '/'
 })
