@@ -16,17 +16,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  build: {
-    assetsDir: 'static/img/',
-    rollupOptions: {
-      output: {
-        chunkFileNames: 'static/js/[name]-[hash].js',
-        entryFileNames: 'static/js/[name]-[hash].js',
-        assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
-      }
-    },
-    chunkSizeWarningLimit: 5000
-  },
   server: {
     proxy: {
       '/Resource': {
