@@ -45,7 +45,7 @@
           Fontfamily
         </h1>
         <p class="text-2xl ">
-          google font: Noto+Sans+TC
+          google font: Noto Sans Traditional Chinese
         </p>
       </section>
       <section
