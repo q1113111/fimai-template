@@ -33,3 +33,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+# node 版本
+
+v16.0.0
+
+# 注意事項
+ * 請使用CSS設計模式:OOCSS、SMACSS、BEM 
+ * class名稱請使用 tailwindCSS 裡的變數 非必要勿使用 JIT ex: xxx-[#fff]

@@ -4,16 +4,12 @@ import storeReset from './plugins/storeReset'
 
 export const useCounterStore = defineStore('counter', () => {
   const count = ref(0)
-  const settings = reactive({
-    dates: new Set()
-  })
   const doubleCount = computed(() => count.value * 2)
   function increment (v) {
     count.value++
-    settings.dates.add(v)
   }
 
-  return { count, doubleCount, settings, increment }
+  return { count, doubleCount, increment }
 })
 
 const store = createPinia()
