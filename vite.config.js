@@ -24,5 +24,6 @@ export default defineConfig({
         // rewrite: path => path.replace(/^\/api/, '')
       }
     }
-  }
+  },
+  base: process.env.NODE_ENV === 'production' ? '/fimai-template/' : '/'
 })
