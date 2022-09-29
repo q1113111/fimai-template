@@ -1,1 +1,0 @@
-import{o as r,c as s}from"./index.14c115a7.js";const _=(c,t)=>{const e=c.__vccOpts||c;for(const[o,n]of t)e[o]=n;return e},a={},f={class:"bg-black"};function l(c,t){return r(),s("div",f)}const i=_(a,[["render",l]]);export{i as default};
