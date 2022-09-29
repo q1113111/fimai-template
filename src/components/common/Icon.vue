@@ -17,7 +17,7 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'text-hint dark:text-regular'
+    default: 'text-hint'
   },
   disable: {
     type: Boolean,
@@ -25,7 +25,7 @@ const props = defineProps({
   },
   disableColor: {
     type: String,
-    default: 'text-load dark:text-disable-dark'
+    default: 'text-load'
   },
   iconClass: {
     type: String,
