@@ -1,14 +1,13 @@
 <template>
   <main class="flex">
     <nav class="fixed flex flex-col h-full p-4 space-y-4 font-semibold text-white bg-slate-600">
-      <a href="#color">Color</a>
-      <a href="#fontfamily">Fontfamily</a>
-      <a href="#fontSize">FontSize</a>
-      <a href="#fontWeight">FontWeight</a>
-      <a href="#icon">Icon</a>
-      <a href="#shadow">Shadow</a>
-      <a href="#rounded">Rounded</a>
-      <a href="#button">Button</a>
+      <a
+        v-for="link of linkArr"
+        :key="link.href"
+        :href="link.href"
+      >
+        {{ link.label }}
+      </a>
     </nav>
     <div class="p-16 ml-20">
       <section
@@ -176,6 +175,17 @@
           </li>
         </ul>
       </section>
+      <section
+        id="breakpoints"
+        class="mb-24 "
+      >
+        <div class="flex items-center mb-8 ">
+          <h1 class="mr-4 text-4xl font-semibold">
+            Breakpoints
+          </h1>
+        </div>
+        <DetailTable :table-data="breakpointsTable" />
+      </section>
       <section id="components">
         <h1 class="mb-8 text-4xl font-semibold">
           Components
@@ -225,6 +235,47 @@
 </template>
 
 <script setup>
+import DetailTable from './DetailTable.vue'
+
+const linkArr = [
+  {
+    href: '#color',
+    label: 'Color'
+  },
+  {
+    href: '#fontfamily',
+    label: 'Fontfamily'
+  },
+  {
+    href: '#fontSize',
+    label: 'FontSize'
+  },
+  {
+    href: '#fontWeight',
+    label: 'FontWeight'
+  },
+  {
+    href: '#icon',
+    label: 'Icon'
+  },
+  {
+    href: '#shadow',
+    label: 'Shadow'
+  },
+  {
+    href: '#rounded',
+    label: 'Rounded'
+  },
+  {
+    href: '#breakpoints',
+    label: 'Breakpoints'
+  },
+  {
+    href: '#button',
+    label: 'Button'
+  }
+]
+
 const colorData = [
   {
     title: 'Indigo',
@@ -755,6 +806,18 @@ const rounderArr = [
   }
 ]
 
+const breakpointsTable = {
+  title: '',
+  theadArr: ['Class infix', 'Dimensions'],
+  list: [
+    { item: ['none', '<640px'] },
+    { item: ['sm', '≥640px'] },
+    { item: ['md', '≥768px'] },
+    { item: ['lg', '≥1024px'] },
+    { item: ['xl', '≥1280px'] },
+    { item: ['2xl', '≥1536px'] }
+  ]
+}
 const btnArr = [
   {
     type: 'primary',
