@@ -2,9 +2,12 @@
   <main class="flex">
     <nav class="fixed flex flex-col h-full p-4 space-y-4 font-semibold text-white bg-slate-600">
       <a href="#color">Color</a>
-      <a href="#fontSize">fontSize</a>
+      <a href="#fontfamily">Fontfamily</a>
+      <a href="#fontSize">FontSize</a>
+      <a href="#fontWeight">FontWeight</a>
       <a href="#icon">Icon</a>
-      <a href="#shadow">shadow</a>
+      <a href="#shadow">Shadow</a>
+      <a href="#rounded">Rounded</a>
       <a href="#button">Button</a>
     </nav>
     <div class="p-16 ml-20">
