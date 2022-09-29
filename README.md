@@ -1,6 +1,8 @@
 # 注意事項
  * 請使用CSS設計模式:OOCSS、SMACSS、BEM 
  * class名稱請使用 tailwindCSS 裡的變數 **非必要勿使用 JIT 尤其顏色 ex: bg-[#fff]**
+ * 設計guideline說明 參閱 localhost/guideline
+ * 共用組件說明 參閱 localhost/detail
  * node 版本 v16.0.0
 
 # template
