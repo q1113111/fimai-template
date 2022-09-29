@@ -4,6 +4,7 @@
       <a href="#color">Color</a>
       <a href="#fontSize">fontSize</a>
       <a href="#icon">Icon</a>
+      <a href="#shadow">shadow</a>
       <a href="#button">Button</a>
     </nav>
     <div class="p-16 ml-20">
@@ -37,11 +38,22 @@
         </ul>
       </section>
       <section
+        id="fontfamily"
+        class="mb-24 "
+      >
+        <h1 class="mb-8 text-4xl font-semibold">
+          Fontfamily
+        </h1>
+        <p class="text-2xl ">
+          google font: Noto+Sans+TC
+        </p>
+      </section>
+      <section
         id="fontSize"
         class="mb-24 "
       >
         <h1 class="mb-8 text-4xl font-semibold">
-          fontSize
+          FontSize
         </h1>
         <ul class="flex items-center space-x-5">
           <li
@@ -56,6 +68,30 @@
             </div>
             <div class="text-base text-neutral-400">
               font-size:{{ font.size }}
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        id="fontWeight"
+        class="mb-24 "
+      >
+        <h1 class="mb-8 text-4xl font-semibold">
+          FontWeight
+        </h1>
+        <ul class="flex items-center space-x-5">
+          <li
+            v-for="(font,i) of fontWeightData"
+            :key="i"
+          >
+            <div
+              class="text-lg text-2xl"
+              :class="font.class"
+            >
+              {{ font.class }}
+            </div>
+            <div class="text-base text-neutral-400">
+              font-weight:{{ font.weight }}
             </div>
           </li>
         </ul>
@@ -78,6 +114,62 @@
             class="mb-4 mr-4"
           >
             <Icon :name="svg" />
+          </li>
+        </ul>
+      </section>
+      <section
+        id="shadow"
+        class="mb-24 "
+      >
+        <div class="flex items-center mb-8">
+          <h1 class="mr-4 text-4xl font-semibold">
+            Shadow
+          </h1>
+        </div>
+
+        <ul class="">
+          <li
+            v-for="shadow of shadowArr"
+            :key="shadow.class"
+            class="mb-6 mr-6 "
+          >
+            <h1 class="mb-4 text-xl">
+              {{ shadow.class }}
+            </h1>
+            <div
+              class="p-6 text-neutral-500"
+              :class="shadow.class"
+            >
+              {{ shadow.label }}
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        id="rounded"
+        class="mb-24 "
+      >
+        <div class="flex items-center mb-8 ">
+          <h1 class="mr-4 text-4xl font-semibold">
+            Rounded
+          </h1>
+        </div>
+
+        <ul class="flex space-x-6">
+          <li
+            v-for="rounder of rounderArr"
+            :key="rounder.class"
+            class=""
+          >
+            <h1 class="mb-4 text-xl">
+              {{ rounder.class }}
+            </h1>
+            <div
+              class="w-24 p-2 text-center border-2 border-solid text-neutral-500"
+              :class="rounder.class"
+            >
+              {{ rounder.label }}
+            </div>
           </li>
         </ul>
       </section>
@@ -553,6 +645,44 @@ const fontSizeData = [
     size: '32px'
   }
 ]
+const fontWeightData = [
+  {
+    class: 'font-thin',
+    weight: '100'
+  },
+  // {
+  //   class: 'font-extralight',
+  //   weight: '200'
+  // },
+  {
+    class: 'font-light',
+    weight: '300'
+  },
+  {
+    class: 'font-normal',
+    weight: '400'
+  },
+  {
+    class: 'font-medium',
+    weight: '500'
+  },
+  // {
+  //   class: 'font-semibold',
+  //   weight: '600'
+  // },
+  {
+    class: 'font-bold',
+    weight: '700'
+  },
+  {
+    class: 'font-extrabold',
+    weight: '800'
+  },
+  {
+    class: 'font-black',
+    weight: '900'
+  }
+]
 const btnArrIcon = [
   {
     type: 'primary',
@@ -577,6 +707,48 @@ const btnArrIcon = [
     label: 'disable',
     beforeIcon: 'cog',
     afterIcon: 'arrow-narrow-right'
+  }
+]
+
+const shadowArr = [
+  {
+    class: 'shadow-sm',
+    label: '0px 1px 2px 0 rgb(0 0 0 / 0.05)'
+  },
+  {
+    class: 'shadow',
+    label: '0px 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
+  },
+  {
+    class: 'shadow-md',
+    label: '0px 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+  },
+  {
+    class: 'shadow-lg',
+    label: '0px 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
+  }
+]
+
+const rounderArr = [
+  {
+    class: 'rounded-sm',
+    label: '2px'
+  },
+  {
+    class: 'rounded',
+    label: '4px'
+  },
+  {
+    class: 'rounded-md',
+    label: '6px'
+  },
+  {
+    class: 'rounded-lg',
+    label: '8px'
+  },
+  {
+    class: 'rounded-full',
+    label: '9999px'
   }
 ]
 
