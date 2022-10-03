@@ -4,6 +4,7 @@
  * 設計guideline說明 參閱 localhost/guideline
  * 共用組件說明 參閱 localhost/detail
  * node 版本 v16.0.0
+ * https://www.figma.com/file/YEhYfCfgLhkOAh2Bnt7WEX/Guideline-Rule?node-id=0%3A1
 
 # template
 
