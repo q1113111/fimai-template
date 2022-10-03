@@ -87,7 +87,7 @@
             :key="i"
           >
             <div
-              class="text-lg text-2xl"
+              class="text-2xl "
               :class="font.class"
             >
               {{ font.class }}
